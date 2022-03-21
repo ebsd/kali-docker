@@ -1,0 +1,13 @@
+#  usage:
+#    To build image if not already built
+#    $ sudo docker-compose build
+#    To run container
+#    $ sudo docker-compose run kali-rolling 
+version: '3'
+
+services:
+  kali-rolling:
+    build: .
+    image: "kali-rolling"
+    volumes:
+      - /mnt/share-kali-rolling:/share
